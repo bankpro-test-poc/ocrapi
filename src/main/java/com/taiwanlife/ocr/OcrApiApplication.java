@@ -13,7 +13,7 @@ public class OcrApiApplication {
 
     @GetMapping("/api/ocr")
     public String ocr() {
-        return "OCR API had been called!!!";
+        return "OCR API had been called!!! sit";
     }
 	
 	public static void main(String[] args) {
