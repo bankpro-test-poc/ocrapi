@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Deployment
+metadata:
+  namespace: sit
+  name: ocrapi-deployment
+spec:
+  selector:
+    matchLabels:
+      app: ocrapi-pod
+  replicas: 1
+  template:
+    metadata:
+      name: ocrapi
+      labels:
+        app: ocrapi-pod
+    spec:
+      containers:
+      - name: ocrapi-container
+        image: ubuntu/poc:ocr
+        ports:
+        - containerPort: 8100
